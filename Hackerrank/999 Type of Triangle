@@ -1,4 +1,9 @@
 SELECT CASE WHEN A + B <= C THEN "Not A Triangle" 
             WHEN A=B AND B=C THEN "Equilateral" 
-            WHEN A!=B AND B!=C AND A!=C THEN "Scalene" ELSE "Isosceles" END 
+            WHEN A!=B AND B!=C AND A!=C THEN "Scalene" ELSE "Isosceles" 
+       END 
        FROM TRIANGLES
+
+
+-- when is used like if function
+-- case... when..then...else...end
