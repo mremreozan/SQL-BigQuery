@@ -1,3 +1,4 @@
 SELECT CEIL(AVG(Salary)-AVG(REPLACE(Salary,'0',''))) FROM EMPLOYEES;
 
 -- CEIL() is for round result up to the next integer.
+
