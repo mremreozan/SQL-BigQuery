@@ -1,0 +1,14 @@
+select N,
+       if(P is NULL,'Root', if((select count(*)from BST where P=B.N)<=0,'Leaf','Inner')) 
+         from BST as B order by N
+         
+
+SELECT N, 
+       CASE WHEN P IS NULL THEN 'Root' 
+                           ELSE (CASE WHEN N IN (SELECT DISTINCT P FROM BST) 
+                                            THEN 'Inner' 
+                                            ELSE 'Leaf' 
+                                 END) 
+       END 
+       FROM BST AS B ORDER BY N;
+       
