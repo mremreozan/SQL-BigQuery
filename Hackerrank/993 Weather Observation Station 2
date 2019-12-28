@@ -1,0 +1,5 @@
+select round(sum(lat_n), 2), round(sum(long_w), 2) from Station
+
+
+OUTPUT:
+42850.04 47381.48 
