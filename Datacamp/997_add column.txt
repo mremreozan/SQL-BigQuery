@@ -1,0 +1,4 @@
+
+-- Add the university_shortname column
+alter table professors
+add university_shortname text;

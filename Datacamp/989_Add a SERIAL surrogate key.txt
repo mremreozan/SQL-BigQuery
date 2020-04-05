@@ -1,0 +1,9 @@
+-- Add the new column to the table
+ALTER TABLE professors 
+ADD COLUMN id serial;
+
+
+
+This column has a special data type serial, which turns the column into an auto-incrementing number.
+This means that, whenever you add a new professor to the table, 
+it will automatically get an id that does not exist yet in the table: a perfect primary key!

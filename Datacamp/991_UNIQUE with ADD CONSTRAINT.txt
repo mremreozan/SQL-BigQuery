@@ -1,0 +1,3 @@
+-- Make universities.university_shortname unique
+ALTER table universities
+ADD constraint university_shortname_unq UNIQUE(university_shortname);

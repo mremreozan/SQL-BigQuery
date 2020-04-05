@@ -1,0 +1,3 @@
+-- Make organization column a primary key
+ALTER TABLE organizations
+add constraint organization_pk primary KEY (organization);

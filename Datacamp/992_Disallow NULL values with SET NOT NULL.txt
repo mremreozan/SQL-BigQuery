@@ -1,0 +1,3 @@
+-- Disallow NULL values in firstname
+alter table professors 
+ALTER COLUMN firstname SET NOT NULL;
