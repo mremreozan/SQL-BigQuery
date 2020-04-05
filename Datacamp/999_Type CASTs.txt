@@ -1,0 +1,8 @@
+-- Calculate the net amount as amount + fee
+SELECT transaction_date, amount + CAST(fee AS integer) AS net_amount 
+FROM transactions;
+
+
+
+If you know that a certain column stores numbers as text, 
+you can cast the column to a numeric form, i.e. to integer.
