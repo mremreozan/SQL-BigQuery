@@ -1,0 +1,12 @@
+The invoices table contains the reference number and due dates of invoices. After some negotiations, 
+it was agreed that all the due dates can be shifted by 90 days. Determine the new due dates.
+
+invoices table
+  reference   varchar()
+  due_date    date
+  
+  
+SELECT reference, 
+       due_date + interval '90 days' AS new_date   
+FROM invoices
+ORDER BY new_date, reference;
