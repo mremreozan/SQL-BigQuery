@@ -1,0 +1,24 @@
+Create a temporary table, named south_african_players. 
+The table should contain the player_id and player_name of all South African players. 
+The value for the country_id field is 2 if a player is South African.
+
+--player
+player_id    player_name     country_id
+1            SC Ganguly          1
+2            BB McCullum         4
+3            RT Ponting          5
+
+
+CREATE TEMP TABLE south_african_players AS
+SELECT player_id, player_name
+FROM player
+WHERE country_id=2;
+SELECT * FROM south_african_players ORDER BY player_id LIMIT 3;
+
+
+OUTPUT:
+-------
+player_id	player_name
+9	JH Kallis
+11	MV Boucher
+49	SM Pollock
