@@ -1,0 +1,28 @@
+The food table contains nutritional information about items on sale in a restaurant. 
+The number of calories per 100g is given in the energy column. 
+You want to compare the calories in the 5 items with the largest number of calories, 
+to the average number of calories in all items on offer. 
+Create a new column avg_calories with the average over all of the data.
+
+food table
+----------
+    id            int 
+    item          text
+    energy        int
+    protein       numeric
+    carbonhydrate numeric
+
+SELECT item, energy AS calories,
+   AVG(energy) over() AS avg_calories
+FROM food
+ORDER BY calories DESC
+LIMIT 5
+
+OUTPUT:
+-------
+item	        calories	avg_calories
+croissant	    343	187.8333333333333333
+waffles	      200	187.8333333333333333
+lasagne	      188	187.8333333333333333
+tacos	        180	187.8333333333333333
+chicken salad	110	187.8333333333333333
