@@ -1,0 +1,23 @@
+Using a subquery as a common expression, return all of the columns from the match table 
+where win_margin is greater than 20 and the match_winner is equal to 1. Limit the results to 10 rows.
+
+
+
+WITH subquery AS (
+  SELECT * FROM match WHERE win_margin > 20
+)
+
+SELECT 	match_id,
+	win_margin
+FROM subquery
+WHERE match_winner = 1
+ORDER BY match_id
+LIMIT 10;
+
+
+OUTPUT:
+-------
+match_id	win_margin
+336019	23
+336022	23
+419132	39
