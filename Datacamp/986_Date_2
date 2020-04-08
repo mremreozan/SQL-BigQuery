@@ -1,0 +1,12 @@
+The invoices table contains the reference number and due dates of invoices. 
+Calculate by how many days the invoices are overdue on the 1st of April 2020.
+
+invoices table
+    reference   varchar()
+    due_date    date
+  
+  
+SELECT reference,
+       date('2020-04-01') - due_date AS days_overdue   
+FROM invoices
+ORDER BY days_overdue DESC, reference;
