@@ -1,0 +1,27 @@
+The wine table, whose structure is shown below, contains information about a selection of wines offered by a restaurant. 
+For each style return the price, alongside with the average price across all wines in the data.
+
+wine table
+----------
+    id       int
+    style    text
+    type     text
+    country  text
+    price    numeric
+    rating   numeric
+    
+
+SELECT style, price, 
+       ROUND(AVG(price) OVER(), 2) AS avg_price
+FROM wine
+ORDER BY style
+
+
+
+OUTPUT:
+-------
+style	         price	avg_price
+alvarinho	     18.99	17.26
+blanc de blanc 17.26
+cabernet	     14.9	  17.26
+gavi	         13.56	17.26
