@@ -1,0 +1,8 @@
+The sentence "Movies, TV, Series" is delimited using a comma. Split the sentence and return the 2nd part.
+
+
+SELECT split_part('Movies, TV, Series', ',', 2) AS part_two;
+
+OUTPUT:
+-------
+TV
