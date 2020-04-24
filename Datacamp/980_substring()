@@ -1,0 +1,23 @@
+The accounts table contains an unique user id and an account code. 
+Extract part of the code starting at position 3 through to position 6. 
+The extracted code part should have length 4.
+--accounts
+user_id   code
+      1   b1905654
+      2   b9740022
+      3   9a85abf3
+      ..  .....
+
+
+SELECT user_id,
+       left(code, 3,7) AS code_part
+       substring(code,3,4) AS code_part
+FROM accounts
+ORDER BY user_id;
+
+
+Expected Output
+user_id	code_part
+1	9056
+2	7400
+3	85ab
